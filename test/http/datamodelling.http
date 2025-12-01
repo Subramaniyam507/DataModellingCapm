@@ -1,0 +1,42 @@
+@server=http://localhost:4004
+@username=alice
+@password=
+
+
+### BooksSet 
+# @name BooksSet_GET
+GET {{server}}/odata/v4/datamodelling/BooksSet
+
+### localization
+GET {{server}}/odata/v4/datamodelling/BooksSet?$filter=id eq 8151031
+Accept-Language: 'de'
+
+### BooksSet
+# @name BooksSet_POST
+POST {{server}}/odata/v4/datamodelling/BooksSet
+Content-Type: application/json
+
+
+{
+  "id": 40804200,
+  "name": "name-4080400"
+}
+
+
+### BooksSet
+# @name BooksSet_PATCH
+PATCH {{server}}/odata/v4/datamodelling/BooksSet/4080400
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+{
+  "id": 4080400,
+  "name": "name-4080400"
+}
+
+
+### BooksSet
+# @name BooksSet_DELETE
+DELETE {{server}}/odata/v4/datamodelling/BooksSet/4080400
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
