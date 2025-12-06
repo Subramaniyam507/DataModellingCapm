@@ -1,8 +1,12 @@
 // unmanaged 
+type CustomerRatig:Integer enum {Good=1;
+                                ok=2;
+                                bad=3;}
 entity CustomerEntity{
         key customerID : Integer;
-        companyName : String;
+        companyName : String  not null @mandatory;
         contactProperty: Integer; 
+        rating:CustomerRatig @assert.range;
         linkToContact :  Association to  ContactEntity 
                          on linkToContact.contactID = contactProperty; 
     }

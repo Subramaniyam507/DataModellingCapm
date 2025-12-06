@@ -5,15 +5,15 @@
 
 ### BooksSet
 # @name BooksSet_GET
-GET {{server}}/odata/v4/datamodelling/BooksSet
-Authorization: Basic {{username}}:{{password}}
+GET {{server}}/odata/v4/datamodelling/Books
+
 
 
 ### BooksSet
 # @name BooksSet_POST
-POST {{server}}/odata/v4/datamodelling/BooksSet
+POST {{server}}/odata/v4/datamodelling/Books
 Content-Type: application/json
-Authorization: Basic {{username}}:{{password}}
+
 
 {
   "id": 7092879,
@@ -28,12 +28,12 @@ Authorization: Basic {{username}}:{{password}}
 
 ### BooksSet
 # @name BooksSet_PATCH
-PATCH {{server}}/odata/v4/datamodelling/BooksSet/7092879
+PATCH {{server}}/odata/v4/datamodelling/BooksSet/14653584
 Content-Type: application/json
-Authorization: Basic {{username}}:{{password}}
+
 
 {
-  "id": 7092879,
+  "id": 14653584,
   "name": "name-7092879",
   "descr": "descr-7092879",
   "another": "another-7092879",
@@ -146,12 +146,13 @@ Authorization: Basic {{username}}:{{password}}
 # @name CustomerEntitySet_POST
 POST {{server}}/odata/v4/datamodelling/CustomerEntitySet
 Content-Type: application/json
-Authorization: Basic {{username}}:{{password}}
+
 
 {
-  "customerID": 7528256,
-  "companyName": "companyName-7528256",
-  "contactProperty": 93,
+  "customerID": 76121,
+   "companyName": "hello",
+  "contactProperty": 953,
+   "rating":3,
   "linkToContact": {
     "contactID": 21951128
   }
@@ -166,8 +167,8 @@ Authorization: Basic {{username}}:{{password}}
 
 {
   "customerID": 7528256,
-  "companyName": "companyName-7528256",
-  "contactProperty": 93,
+  
+  "contactProperty": 94,
   "linkToContact": {
     "contactID": 21951128
   }

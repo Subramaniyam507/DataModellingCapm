@@ -1,7 +1,8 @@
 using {Country} from '@sap/cds/common';
 
 //localized
-entity Books{
+
+@cds.autoexpose entity Books{
     key id : Integer;
         name:localized String;
         descr:localized String;
