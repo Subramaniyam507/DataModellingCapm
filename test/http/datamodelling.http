@@ -3,40 +3,357 @@
 @password=
 
 
-### BooksSet 
+### BooksSet
 # @name BooksSet_GET
 GET {{server}}/odata/v4/datamodelling/BooksSet
+Authorization: Basic {{username}}:{{password}}
 
-### localization
-GET {{server}}/odata/v4/datamodelling/BooksSet?$filter=id eq 8151031
-Accept-Language: 'de'
 
 ### BooksSet
 # @name BooksSet_POST
 POST {{server}}/odata/v4/datamodelling/BooksSet
 Content-Type: application/json
-
+Authorization: Basic {{username}}:{{password}}
 
 {
-  "id": 40804200,
-  "name": "name-4080400"
+  "id": 7092879,
+  "name": "name-7092879",
+  "descr": "descr-7092879",
+  "another": "another-7092879",
+  "country": {
+    "code": "807"
+  }
 }
 
 
 ### BooksSet
 # @name BooksSet_PATCH
-PATCH {{server}}/odata/v4/datamodelling/BooksSet/4080400
+PATCH {{server}}/odata/v4/datamodelling/BooksSet/7092879
 Content-Type: application/json
 Authorization: Basic {{username}}:{{password}}
 
 {
-  "id": 4080400,
-  "name": "name-4080400"
+  "id": 7092879,
+  "name": "name-7092879",
+  "descr": "descr-7092879",
+  "another": "another-7092879",
+  "country": {
+    "code": "807"
+  }
 }
 
 
 ### BooksSet
 # @name BooksSet_DELETE
-DELETE {{server}}/odata/v4/datamodelling/BooksSet/4080400
+DELETE {{server}}/odata/v4/datamodelling/BooksSet/7092879
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+
+### Countries
+# @name Countries_GET
+GET {{server}}/odata/v4/datamodelling/Countries
+Authorization: Basic {{username}}:{{password}}
+
+
+### TeacherSet
+# @name TeacherSet_GET
+GET {{server}}/odata/v4/datamodelling/TeacherSet
+Authorization: Basic {{username}}:{{password}}
+
+
+### TeacherSet
+# @name TeacherSet_POST
+POST {{server}}/odata/v4/datamodelling/TeacherSet
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+{
+  "teachID": 4582873,
+  "name": "name-4582873",
+  "dept": {
+    "departID": 24448319
+  }
+}
+
+
+### TeacherSet
+# @name TeacherSet_PATCH
+PATCH {{server}}/odata/v4/datamodelling/TeacherSet/4582873
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+{
+  "teachID": 4582873,
+  "name": "name-4582873",
+  "dept": {
+    "departID": 24448319
+  }
+}
+
+
+### TeacherSet
+# @name TeacherSet_DELETE
+DELETE {{server}}/odata/v4/datamodelling/TeacherSet/4582873
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+
+### DepartmentSet
+# @name DepartmentSet_GET
+GET {{server}}/odata/v4/datamodelling/DepartmentSet
+Authorization: Basic {{username}}:{{password}}
+
+
+### DepartmentSet
+# @name DepartmentSet_POST
+POST {{server}}/odata/v4/datamodelling/DepartmentSet
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+{
+  "departID": 24448319,
+  "name": "name-24448319"
+}
+
+
+### DepartmentSet
+# @name DepartmentSet_PATCH
+PATCH {{server}}/odata/v4/datamodelling/DepartmentSet/24448319
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+{
+  "departID": 24448319,
+  "name": "name-24448319"
+}
+
+
+### DepartmentSet
+# @name DepartmentSet_DELETE
+DELETE {{server}}/odata/v4/datamodelling/DepartmentSet/24448319
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+
+### CustomerEntitySet
+# @name CustomerEntitySet_GET
+GET {{server}}/odata/v4/datamodelling/CustomerEntitySet
+Authorization: Basic {{username}}:{{password}}
+
+
+### CustomerEntitySet
+# @name CustomerEntitySet_POST
+POST {{server}}/odata/v4/datamodelling/CustomerEntitySet
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+{
+  "customerID": 7528256,
+  "companyName": "companyName-7528256",
+  "contactProperty": 93,
+  "linkToContact": {
+    "contactID": 21951128
+  }
+}
+
+
+### CustomerEntitySet
+# @name CustomerEntitySet_PATCH
+PATCH {{server}}/odata/v4/datamodelling/CustomerEntitySet/7528256
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+{
+  "customerID": 7528256,
+  "companyName": "companyName-7528256",
+  "contactProperty": 93,
+  "linkToContact": {
+    "contactID": 21951128
+  }
+}
+
+
+### CustomerEntitySet
+# @name CustomerEntitySet_DELETE
+DELETE {{server}}/odata/v4/datamodelling/CustomerEntitySet/7528256
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+
+### ContactEntitySet
+# @name ContactEntitySet_GET
+GET {{server}}/odata/v4/datamodelling/ContactEntitySet
+Authorization: Basic {{username}}:{{password}}
+
+
+### ContactEntitySet
+# @name ContactEntitySet_POST
+POST {{server}}/odata/v4/datamodelling/ContactEntitySet
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+{
+  "contactID": 21951128,
+  "contactName": "contactName-21951128",
+  "contactPhone": "contactPhone-21951128"
+}
+
+
+### ContactEntitySet
+# @name ContactEntitySet_PATCH
+PATCH {{server}}/odata/v4/datamodelling/ContactEntitySet/21951128
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+{
+  "contactID": 21951128,
+  "contactName": "contactName-21951128",
+  "contactPhone": "contactPhone-21951128"
+}
+
+
+### ContactEntitySet
+# @name ContactEntitySet_DELETE
+DELETE {{server}}/odata/v4/datamodelling/ContactEntitySet/21951128
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+
+### PurchaseOderSet
+# @name PurchaseOderSet_GET
+GET {{server}}/odata/v4/datamodelling/PurchaseOderSet
+Authorization: Basic {{username}}:{{password}}
+
+
+### PurchaseOderSet
+# @name PurchaseOderSet_POST
+POST {{server}}/odata/v4/datamodelling/PurchaseOderSet
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+{
+  "poid": 6281791,
+  "item_id": 6281791,
+  "item": [
+    {
+      "name": "name-21530755"
+    }
+  ],
+  "name": "name-6281791"
+}
+
+
+### PurchaseOderSet
+# @name PurchaseOderSet_PATCH
+PATCH {{server}}/odata/v4/datamodelling/PurchaseOderSet(poid=6281791,item_id=6281791)
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+{
+  "poid": 6281791,
+  "item_id": 6281791,
+  "item": [
+    {
+      "name": "name-21530755"
+    }
+  ],
+  "name": "name-6281791"
+}
+
+
+### PurchaseOderSet
+# @name PurchaseOderSet_DELETE
+DELETE {{server}}/odata/v4/datamodelling/PurchaseOderSet(poid=6281791,item_id=6281791)
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+
+### PoitemsSet
+# @name PoitemsSet_GET
+GET {{server}}/odata/v4/datamodelling/PoitemsSet
+Authorization: Basic {{username}}:{{password}}
+
+
+### PoitemsSet
+# @name PoitemsSet_POST
+POST {{server}}/odata/v4/datamodelling/PoitemsSet
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+{
+  "name": "name-21530755"
+}
+
+
+### PoitemsSet
+# @name PoitemsSet_PATCH
+PATCH {{server}}/odata/v4/datamodelling/PoitemsSet/6281791
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+{
+  "name": "name-21530755"
+}
+
+
+### PoitemsSet
+# @name PoitemsSet_DELETE
+DELETE {{server}}/odata/v4/datamodelling/PoitemsSet/6281791
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+
+### OrdersSet
+# @name OrdersSet_GET
+GET {{server}}/odata/v4/datamodelling/OrdersSet?$filter=ID eq '21231047'&$expand=Items
+
+
+
+### OrdersSet
+# @name OrdersSet_POST
+POST {{server}}/odata/v4/datamodelling/OrdersSet
+Content-Type: application/json
+
+
+{
+  "ID": 21231047,
+  "Items": [
+    {
+      "id": 8935321,
+      "quantity": 81
+    },
+    {
+      "id": 8935322,
+      "quantity": 74
+    }
+  ]
+}
+
+
+### OrdersSet
+# @name OrdersSet_PATCH
+PATCH {{server}}/odata/v4/datamodelling/OrdersSet/21231047
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+{
+  "ID": 21231047,
+  "Items": [
+    {
+      "id": 8935321,
+      "quantity": 81
+    },
+    {
+      "id": 8935322,
+      "quantity": 74
+    }
+  ]
+}
+
+
+### OrdersSet
+# @name OrdersSet_DELETE
+DELETE {{server}}/odata/v4/datamodelling/OrdersSet/21231047
 Content-Type: application/json
 Authorization: Basic {{username}}:{{password}}

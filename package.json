@@ -12,7 +12,11 @@
     "@cap-js/sqlite": "^2"
   },
   "scripts": {
-    "start": "cds-serve"
+    "start": "cds-serve",
+    "db":"cds build && cds deploy --to hana",
+    "hyb":"cds watch --profile hybrid",
+    "data": "cds add data --records 50",
+    "comp":"cds compile /home/user/projects/DataModellingCapm/db/normaldb.cds to cdl"
   },
   "private": true
 }
